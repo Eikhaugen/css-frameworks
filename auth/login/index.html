@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../main.js" type="module" defer></script>
+    <script src="https://kit.fontawesome.com/6747f39511.js" crossorigin="anonymous"></script>
+    <title>Vite App</title>
+  </head>
+  <body class="w-full h-screen bg-bg dark:bg-dark-bg">
+
+    <nav class="w-full p-4 flex justify-between bg-secondary dark:bg-dark-secondary text-md font-semibold text-white">
+        <span>ProjectName</span>
+        <ul class="gap-3 hidden md:flex group">
+            <li class="bg-primary dark:bg-dark-primary hover:bg-primary-active dark:hover:bg-dark-primary-active rounded-xl px-3 py-2">
+                <a href="/">Home</a>
+            </li>
+            <li class="bg-primary dark:bg-dark-primary hover:bg-primary-active dark:hover:bg-dark-primary-active rounded-xl px-3 py-2">
+                <a href="/profile/index.html">Profile</a>
+            </li>
+            <li class="bg-primary-active dark:bg-dark-primary hover:bg-primary-active dark:hover:bg-dark-primary-active rounded-xl px-3 py-2">
+                <a href="/auth/login/index.html">Login</a>
+            </li>
+        </ul>
+        <button class="md:hidden">
+            <i class="fa-solid fa-bars fa-xl text-text-black  "></i>            
+        </button>
+    </nav>
+
+    <main class="w-full h-full my-auto flex items-center justify-center bg-bg dark:bg-dark-bg">
+        <div class="max-w-md w-full p-6 shadow-md rounded-lg bg-secondary dark:bg-dark-secondary">
+            <h1 class="text-2xl font-semibold mb-4 text-text-black  ">Login</h1>
+            <form action="/auth/login" method="POST" class="space-y-4">
+              <div>
+                <label for="email" class="block text-sm font-medium text-text-black  ">Email</label>
+                <input type="email" id="email" name="email" required
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              </div>
+              <div>
+                <label for="password" class="block text-sm font-medium text-text-black  ">Password</label>
+                <input type="password" id="password" name="password" required
+                       class="mt-1 block w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+              </div>
+              <button type="submit"
+                      class="w-full bg-cta dark:bg-dark-cta text-white py-2 px-4 rounded-md hover:bg-cta-active dark:hover:bg-dark-cta-active focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 font-bold">
+                Login
+              </button>
+            </form>
+            <p class="mt-4 text-center text-sm text-text-black ">
+              Don't have an account?
+              <a href="/auth/register/index.html" class="text-indigo-600 hover:underline">Register here</a>
+            </p>
+          </div>
+    </main>
+  </body>
+</html>
