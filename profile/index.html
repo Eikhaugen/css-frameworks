@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,146 +9,354 @@
     <script src="https://kit.fontawesome.com/6747f39511.js" crossorigin="anonymous"></script>
 
 </head>
-<body>
-    <nav>
-        <svg width="426" height="373" viewBox="0 0 426 373" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <mask id="mask0_1_32" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="426" height="373">
-            <path d="M426 0H0V373H426V0Z" fill="white"/>
-            </mask>
-            <g mask="url(#mask0_1_32)">
-            <path d="M102.735 298.335C113.446 290.53 127.313 288.537 139.767 293.021C161.77 300.992 186.431 305.558 212.669 305.558C316.21 305.558 385.377 238.717 385.377 172.707C385.377 106.696 316.21 39.856 212.669 39.856C109.128 39.856 39.9633 106.696 39.9633 172.707C39.9633 199.278 50.2583 224.851 69.6053 246.772C76.7463 254.826 80.2333 265.454 79.4033 276.248C78.2403 291.277 74.6703 305.061 70.0213 317.266C84.1353 310.707 95.8433 303.4 102.735 298.418V298.335ZM17.7103 332.046C19.2043 329.804 20.6153 327.562 21.9453 325.32C30.2483 311.537 38.1363 293.436 39.7143 273.093C14.8043 244.779 0.107275 210.155 0.107275 172.707C0.107275 77.303 95.2623 0 212.669 0C330.077 0 425.232 77.303 425.232 172.707C425.232 268.111 330.077 345.414 212.669 345.414C181.865 345.414 152.638 340.099 126.233 330.551C116.352 337.775 100.244 347.655 81.1473 355.96C68.6083 361.439 54.3273 366.422 39.5473 369.327C38.8833 369.493 38.2193 369.577 37.5553 369.742C33.9013 370.406 30.3313 370.988 26.5943 371.32C26.4283 371.32 26.1793 371.403 26.0123 371.403C21.7783 371.819 17.5443 372.067 13.3093 372.067C7.91228 372.067 3.09628 368.829 1.02128 363.847C-1.05472 358.865 0.107277 353.219 3.84328 349.4C7.24828 345.912 10.3203 342.176 13.2263 338.19C14.6383 336.28 15.9663 334.37 17.2123 332.461L17.4603 332.046H17.7103Z" fill="black"/>
-            <path d="M232.572 78.0661C226.379 76.2811 219.93 79.8881 218.146 86.0811L171.511 249.302C169.726 255.496 173.332 261.945 179.526 263.729C185.72 265.515 192.168 261.908 193.953 255.715L240.588 92.4931C242.374 86.3001 238.767 79.8511 232.572 78.0661ZM261.938 121.822C257.384 126.376 257.384 133.772 261.938 138.326L294.472 170.897L261.901 203.47C257.347 208.024 257.347 215.419 261.901 219.974C266.455 224.528 273.851 224.528 278.405 219.974L319.211 179.168C323.765 174.614 323.765 167.218 319.211 162.664L278.405 121.859C273.851 117.305 266.455 117.305 261.901 121.859L261.938 121.822ZM150.197 121.822C145.643 117.268 138.247 117.268 133.693 121.822L92.8882 162.628C88.3342 167.182 88.3342 174.578 92.8882 179.132L133.693 219.937C138.247 224.491 145.643 224.491 150.197 219.937C154.751 215.383 154.751 207.987 150.197 203.433L117.626 170.897L150.197 138.326C154.751 133.772 154.751 126.376 150.197 121.822Z" fill="black"/>
-            </g>
+
+<body class="w-full min-h-dvh flex justify-center dark:bg-gray-900">
+    <div class="grid-wrapper w-full grid grid-cols-12 max-w-7xl">
+        <nav id="desktopNav"
+        class="hidden sticky top-0 h-screen overflow-y-auto md:flex md:flex-col md:gap-4 items-center lg:items-start p-4 md:col-span-1 lg:col-span-2 border-r border-gray-500 border-solid">
+            <svg class="fill-primary dark:fill-white h-8 w-8" viewBox="0 0 426 373" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <mask id="mask0_1_32" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="426"
+                    height="373">
+                    <path d="M426 0H0V373H426V0Z" fill="white" />
+                </mask>
+                <g mask="url(#mask0_1_32)">
+                    <path
+                        d="M102.735 298.335C113.446 290.53 127.313 288.537 139.767 293.021C161.77 300.992 186.431 305.558 212.669 305.558C316.21 305.558 385.377 238.717 385.377 172.707C385.377 106.696 316.21 39.856 212.669 39.856C109.128 39.856 39.9633 106.696 39.9633 172.707C39.9633 199.278 50.2583 224.851 69.6053 246.772C76.7463 254.826 80.2333 265.454 79.4033 276.248C78.2403 291.277 74.6703 305.061 70.0213 317.266C84.1353 310.707 95.8433 303.4 102.735 298.418V298.335ZM17.7103 332.046C19.2043 329.804 20.6153 327.562 21.9453 325.32C30.2483 311.537 38.1363 293.436 39.7143 273.093C14.8043 244.779 0.107275 210.155 0.107275 172.707C0.107275 77.303 95.2623 0 212.669 0C330.077 0 425.232 77.303 425.232 172.707C425.232 268.111 330.077 345.414 212.669 345.414C181.865 345.414 152.638 340.099 126.233 330.551C116.352 337.775 100.244 347.655 81.1473 355.96C68.6083 361.439 54.3273 366.422 39.5473 369.327C38.8833 369.493 38.2193 369.577 37.5553 369.742C33.9013 370.406 30.3313 370.988 26.5943 371.32C26.4283 371.32 26.1793 371.403 26.0123 371.403C21.7783 371.819 17.5443 372.067 13.3093 372.067C7.91228 372.067 3.09628 368.829 1.02128 363.847C-1.05472 358.865 0.107277 353.219 3.84328 349.4C7.24828 345.912 10.3203 342.176 13.2263 338.19C14.6383 336.28 15.9663 334.37 17.2123 332.461L17.4603 332.046H17.7103Z" />
+                    <path
+                        d="M232.572 78.0661C226.379 76.2811 219.93 79.8881 218.146 86.0811L171.511 249.302C169.726 255.496 173.332 261.945 179.526 263.729C185.72 265.515 192.168 261.908 193.953 255.715L240.588 92.4931C242.374 86.3001 238.767 79.8511 232.572 78.0661ZM261.938 121.822C257.384 126.376 257.384 133.772 261.938 138.326L294.472 170.897L261.901 203.47C257.347 208.024 257.347 215.419 261.901 219.974C266.455 224.528 273.851 224.528 278.405 219.974L319.211 179.168C323.765 174.614 323.765 167.218 319.211 162.664L278.405 121.859C273.851 117.305 266.455 117.305 261.901 121.859L261.938 121.822ZM150.197 121.822C145.643 117.268 138.247 117.268 133.693 121.822L92.8882 162.628C88.3342 167.182 88.3342 174.578 92.8882 179.132L133.693 219.937C138.247 224.491 145.643 224.491 150.197 219.937C154.751 215.383 154.751 207.987 150.197 203.433L117.626 170.897L150.197 138.326C154.751 133.772 154.751 126.376 150.197 121.822Z" />
+                </g>
             </svg>
-            <a href="../home/">
-                <i class="fa-regular fa-house"></i>
-                <span>
-                    Home
-                </span>
+            <a href="../home/" aria-label="Home" title="Home">
+                <i class="fa-regular fa-xl fa-house text-primary hover:text-primary-dark dark:text-white"></i>
+                <span class="hidden lg:inline-block text-primary dark:text-white">Home</span>
             </a>
-            <a>
-                <i class="fa-regular fa-bell"></i>
-                <span>
-                    Notifications
-                </span>
+            <a aria-label="Notifications" title="Notifications">
+                <i class="fa-regular fa-xl fa-bell text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Notifications</span>
             </a>
-            <a>
-                <i class="fa-regular fa-envelope"></i>
-                <span>
-                    Messages
-                </span>
+            <a title="Messages">
+                <i class="fa-regular fa-xl fa-envelope text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Messages</span>
             </a>
-
-            <a>
-                <i class="fa-regular fa-briefcase"></i>
-                <span>
-                    Jobs
-                </span>
+            <a title="Jobs">
+                <i class="fa-regular fa-xl fa-briefcase text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Jobs</span>
             </a>
-
-            <a> 
-                <i class="fa-regular fa-calendar"></i>
-                <span>
-                    Event Calendar
-                </span>
+            <a title="Event Calendar">
+                <i class="fa-regular fa-xl fa-calendar text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Event Calendar</span>
             </a>
-
-            <a href="">
-                <i class="fa-solid fa-user"></i>
-                <span>
-                    Profile
-                </span>
+            <a href="../profile/" aria-label="Profile" title="Profile">
+                <i class="fa-solid fa-xl fa-user text-primary hover:text-primary-dark dark:text-white"></i>
+                <span class="hidden lg:inline-block text-primary dark:text-white">Profile</span>
+            </a>
+            <a aria-label="Settings" title="Settings">
+                <i class="fa-regular fa-xl fa-gear text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Settings</span>
+            </a>
+            <a href="#" title="Log out">
+                <i class="fa-regular fa-xl text-primary-light dark:text-gray-500 fa-right-from-bracket"></i> 
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Log Out</span>
             </a>
 
-            <a href="">
-                <i class="fa-regular fa-gear"></i>
-                <span>
-                    Setting
-                </span>
-            </a>
-    </nav>
-    <main>
-        <img src="" alt="">
+        </nav>
 
-        <div>
-            <img src="" alt="">
-            <div>
-                <div>
-                    <span>Name</span> <button>Edit Profile</button>
+        <nav id="mobileNav" class="absolute top-0 left-0 w-full md:hidden bg-white dark:bg-gray-900 p-4 shadow-sm">
+            <div class="flex justify-between items-center">
+
+                <svg class="fill-primary dark:fill-white h-8 w-8" viewBox="0 0 426 373" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <mask id="mask0_1_32" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="426"
+                        height="373">
+                        <path d="M426 0H0V373H426V0Z" fill="white" />
+                    </mask>
+                    <g mask="url(#mask0_1_32)">
+                        <path
+                            d="M102.735 298.335C113.446 290.53 127.313 288.537 139.767 293.021C161.77 300.992 186.431 305.558 212.669 305.558C316.21 305.558 385.377 238.717 385.377 172.707C385.377 106.696 316.21 39.856 212.669 39.856C109.128 39.856 39.9633 106.696 39.9633 172.707C39.9633 199.278 50.2583 224.851 69.6053 246.772C76.7463 254.826 80.2333 265.454 79.4033 276.248C78.2403 291.277 74.6703 305.061 70.0213 317.266C84.1353 310.707 95.8433 303.4 102.735 298.418V298.335ZM17.7103 332.046C19.2043 329.804 20.6153 327.562 21.9453 325.32C30.2483 311.537 38.1363 293.436 39.7143 273.093C14.8043 244.779 0.107275 210.155 0.107275 172.707C0.107275 77.303 95.2623 0 212.669 0C330.077 0 425.232 77.303 425.232 172.707C425.232 268.111 330.077 345.414 212.669 345.414C181.865 345.414 152.638 340.099 126.233 330.551C116.352 337.775 100.244 347.655 81.1473 355.96C68.6083 361.439 54.3273 366.422 39.5473 369.327C38.8833 369.493 38.2193 369.577 37.5553 369.742C33.9013 370.406 30.3313 370.988 26.5943 371.32C26.4283 371.32 26.1793 371.403 26.0123 371.403C21.7783 371.819 17.5443 372.067 13.3093 372.067C7.91228 372.067 3.09628 368.829 1.02128 363.847C-1.05472 358.865 0.107277 353.219 3.84328 349.4C7.24828 345.912 10.3203 342.176 13.2263 338.19C14.6383 336.28 15.9663 334.37 17.2123 332.461L17.4603 332.046H17.7103Z" />
+                        <path
+                            d="M232.572 78.0661C226.379 76.2811 219.93 79.8881 218.146 86.0811L171.511 249.302C169.726 255.496 173.332 261.945 179.526 263.729C185.72 265.515 192.168 261.908 193.953 255.715L240.588 92.4931C242.374 86.3001 238.767 79.8511 232.572 78.0661ZM261.938 121.822C257.384 126.376 257.384 133.772 261.938 138.326L294.472 170.897L261.901 203.47C257.347 208.024 257.347 215.419 261.901 219.974C266.455 224.528 273.851 224.528 278.405 219.974L319.211 179.168C323.765 174.614 323.765 167.218 319.211 162.664L278.405 121.859C273.851 117.305 266.455 117.305 261.901 121.859L261.938 121.822ZM150.197 121.822C145.643 117.268 138.247 117.268 133.693 121.822L92.8882 162.628C88.3342 167.182 88.3342 174.578 92.8882 179.132L133.693 219.937C138.247 224.491 145.643 224.491 150.197 219.937C154.751 215.383 154.751 207.987 150.197 203.433L117.626 170.897L150.197 138.326C154.751 133.772 154.751 126.376 150.197 121.822Z" />
+                    </g>
+                </svg>
+
+
+                <button id="menuToggleBTN" class="text-primary dark:text-white">
+                    <i class="fa-solid fa-bars fa-xl"></i>
+                </button>
+            </div>
+
+            <ul class="mt-4 space-y-4 hidden">
+                <li><a href="../home/" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-solid fa-house"></i> <span>Home</span>
+                    </a></li>
+                <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-regular fa-bell"></i> <span>Notifications</span>
+                    </a></li>
+                <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-regular fa-envelope"></i> <span>Messages</span>
+                    </a></li>
+                <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-regular fa-briefcase"></i> <span>Jobs</span>
+                    </a></li>
+                <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-regular fa-calendar"></i> <span>Event Calendar</span>
+                    </a></li>
+                <li><a href="../profile/" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-regular fa-user"></i> <span>Profile</span>
+                    </a></li>
+                <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-regular fa-gear"></i> <span>Settings</span>
+                    </a></li>
+            </ul>
+        </nav>
+
+        <main class="col-span-12 md:col-span-8 lg:col-span-7 mt-16 md:mt-0 overflow-y-auto dark:bg-gray-800">
+
+            <div id="profileSection" class="bg-white dark:bg-gray-800 p-6 shadow-md border-b border-solid border-gray-500">
+                <img src="/profile-banner.jpg" alt="Banner" class="w-full h-40 object-cover rounded-lg">
+                <div class="relative mt-6">
+                    <img src="/profile-photo.webp" alt="Profile Avatar" class="w-24 h-24 rounded-full bg-gray-300 dark:bg-gray-700 border-4 border-white dark:border-gray-800 absolute -top-12 left-4">
+                    <div class="ml-32">
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-semibold text-gray-900 dark:text-gray-200">NoobCode</span>
+                            <button class="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary">
+                                Edit Profile
+                            </button>
+                        </div>
+                        <p class="mt-2 text-gray-700 dark:text-gray-300">
+                            Passionate frontend developer student exploring the world of JavaScript and responsive design. Currently building fun projects, practicing clean code, and learning modern frameworks. Dreaming of crafting engaging web experiences!
+                        </p>
+                        <div class="mt-4 flex items-center space-x-4 text-gray-600 dark:text-gray-400">
+                            <span><i class="fa-regular fa-location-dot"></i> Antarctica</span>
+                            <span><i class="fa-regular fa-calendar"></i> Joined April 2023</span>
+                        </div>
+                        <div class="mt-4 flex space-x-6">
+                            <span class="dark:text-gray-200"><b>253</b> Following</span>
+                            <span class="dark:text-gray-200"><b>597</b> Followers</span>
+                        </div>
+                    </div>
                 </div>
-                <p>Bio here</p>
-                <div>
-                    <span><i class="fa-regular fa-location-dot"></i> Antarctica</span><span><i class="fa-regular fa-calendar"></i>Joined April 2023</span>
+            </div>
+            
+            
+            <div id="createPost" class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid sticky top-0 z-10">
+                <div class="flex-1 space-y-3">
+                    <textarea name="postContent" id="postContent" placeholder="What's on your mind?"
+                        class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-2 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-code"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-image"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-gif"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-icons"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-location-dot"></i>
+                            </button>
+                        </div>
+                        <button
+                            class="px-4 py-2 bg-primary text-white rounded-md hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary">
+                            Post
+                        </button>
+                    </div>
                 </div>
-                <div>
-                    <span><b>253</b> Following</span> <span><b>597</b>Followers</span>
+            </div>
+
+            <div id="postsContainer" class="space-y-6">
+
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">NoobCode</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">2hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">Just finished a 3-hour debugging session, only to realize I forgot a semicolon. Feeling like a true syntax warrior. 🥲💻 #CodingLife #FrontendFrustrations</p>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
                 </div>
+            
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">NoobCode</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">4hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">Built a new feature today: a dynamic, fully responsive navbar. Only took five cups of coffee and a lot of trial and error. ☕✨ #FrontendDev #CSSMagic</p>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">NoobCode</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">5hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">"When you finally understand how a JavaScript closure works, it's like unlocking a new level in the coding game. Mind = blown. 🚀🤯 #JavaScriptJourney #CodingWins"</p>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">NoobCode</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">6hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">Experimented with Tailwind CSS for the first time today. Loving how fast styling can be, but also terrified of the utility class madness! 😅💼 #TailwindCSS #FrontendExperiments</p>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">NoobCode</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">7hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">Just launched my first project on Netlify! It's a simple yet functional portfolio site. Seeing it live is the best feeling. 🎉🌐 #WebDev #Deployed</p>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            
             </div>
+            
+
+        </main>
 
 
-        </div>
+        <aside class="hidden sticky top-0 h-screen overflow-y-auto md:flex md:flex-col md:col-span-3 lg:col-span-3 border-l border-gray-300 dark:border-gray-700 p-4 space-y-6">
 
-<div id="postsContainer">
-    <div>
-        <div>
-            <img src="" alt="">
-        </div>
-        <div>
-            <div>
-                <div><span>Username</span> <span>Hours ago</span></div>
-                <p>Post text</p>
-            </div>
-            <div>
-                <img src="" alt="">
-            </div>
-            <div>
-                <button><i class="fa-regular fa-heart"></i></button>
-                <button><i class="fa-regular fa-comment"></i></button>
-                <button><i class="fa-regular fa-share"></i></button>
-                <button><i class="fa-regular fa-flag"></i></button>
-            </div>
-        </div>
+    <div class="search-container flex items-center bg-gray-100 dark:bg-gray-800 rounded-md p-2">
+        <input type="text" placeholder="Search..." class="flex-1 bg-transparent outline-none text-gray-900 dark:text-gray-200 px-2 w-10">
+        <button type="button" class="text-gray-500 dark:text-gray-400">
+            <i class="fas fa-search"></i>
+        </button>
     </div>
 
-</div>
-    </main>
-    <aside>
-        <div class="search-container">
-            <input type="text" placeholder="Search...">
-            <button type="button">
-                <i class="fas fa-search"></i>
-            </button>
-        </div>
-        <div>
-            <h2>
-                You might find this interesting:
-            </h2>
+    <div class="space-y-4">
+        <h2 class="text-md font-semibold text-gray-900 dark:text-gray-200">
+            You might like this:
+        </h2>
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <span class="text-gray-800 dark:text-gray-300">
+                DevWeekly: Python 4.0 Announced - A Leap into True Parallelism
+            </span>
+        </a>
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <span class="text-gray-800 dark:text-gray-300">
+                CodePulse: JavaScript Framework Wars Heat Up - New Player 'XenoJS' Claims to End All Others
+            </span>
+        </a>
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <span class="text-gray-800 dark:text-gray-300">
+                CyberFront: AI-Powered Penetration Testing Tool Released, Raises Security Community Alarm
+            </span>
+        </a>
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <span class="text-gray-800 dark:text-gray-300">
+                CloudWave: Serverless Revolution 2.0 - The Emergence of Stateless Microservices
+            </span>
+        </a>
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <span class="text-gray-800 dark:text-gray-300">
+                QuantumBytes: IBM's Quantum Computer Solves Complex Math Problem 100x Faster Than Supercomputers
+            </span>
+        </a>
+        
+    </div>
+</aside>
 
-            <a href="">
-                <img src="" alt="">
-                <span>
-                    Some news
-                </span>
-            </a>
-        </div>
-        <div>
-            <h2>
-                Who to follow
-            </h2>
 
-            <a href="">
-                <img src="" alt="">
-                <span>Navn</span>
-                <button>
-                    Follow
-                </button>
-            </a>
 
-            <button>
-                Show more
-            </button>
-        </div>
-    </aside>
-
+    </div>
 </body>
+
 </html>

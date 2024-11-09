@@ -10,10 +10,10 @@
 
 </head>
 
-<body class="w-full min-h-dvh flex justify-center">
+<body class="w-full min-h-dvh flex justify-center dark:bg-gray-900">
     <div class="grid-wrapper w-full grid grid-cols-12 max-w-7xl">
         <nav id="desktopNav"
-            class="hidden h-full md:flex md:flex-col md:gap-4 items-center lg:items-start p-4 md:col-span-1 lg:col-span-2 border-r border-gray-500 border-solid">
+        class="hidden sticky top-0 h-screen overflow-y-auto md:flex md:flex-col md:gap-4 items-center lg:items-start p-4 md:col-span-1 lg:col-span-2 border-r border-gray-500 border-solid">
             <svg class="fill-primary dark:fill-white h-8 w-8" viewBox="0 0 426 373" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <mask id="mask0_1_32" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="426"
@@ -29,36 +29,40 @@
             </svg>
             <a href="../home/" aria-label="Home" title="Home">
                 <i class="fa-solid fa-xl fa-house text-primary hover:text-primary-dark dark:text-white"></i>
-                <span class="hidden lg:inline-block text-primary">Home</span>
+                <span class="hidden lg:inline-block text-primary dark:text-white">Home</span>
             </a>
             <a aria-label="Notifications" title="Notifications">
-                <i class="fa-regular fa-xl fa-bell text-primary-light dark:text-white"></i>
-                <span class="hidden lg:inline-block text-primary-light">Notifications</span>
+                <i class="fa-regular fa-xl fa-bell text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Notifications</span>
             </a>
             <a title="Messages">
-                <i class="fa-regular fa-xl fa-envelope text-primary-light dark:text-white"></i>
-                <span class="hidden lg:inline-block text-primary-light">Messages</span>
+                <i class="fa-regular fa-xl fa-envelope text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Messages</span>
             </a>
             <a title="Jobs">
-                <i class="fa-regular fa-xl fa-briefcase text-primary-light dark:text-white"></i>
-                <span class="hidden lg:inline-block text-primary-light">Jobs</span>
+                <i class="fa-regular fa-xl fa-briefcase text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Jobs</span>
             </a>
             <a title="Event Calendar">
-                <i class="fa-regular fa-xl fa-calendar text-primary-light dark:text-white"></i>
-                <span class="hidden lg:inline-block text-primary-light">Event Calendar</span>
+                <i class="fa-regular fa-xl fa-calendar text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Event Calendar</span>
             </a>
             <a href="../profile/" aria-label="Profile" title="Profile">
                 <i class="fa-regular fa-xl fa-user text-primary hover:text-primary-dark dark:text-white"></i>
-                <span class="hidden lg:inline-block text-primary">Profile</span>
+                <span class="hidden lg:inline-block text-primary dark:text-white">Profile</span>
             </a>
             <a aria-label="Settings" title="Settings">
-                <i class="fa-regular fa-xl fa-gear text-primary-light dark:text-white"></i>
-                <span class="hidden lg:inline-block text-primary-light">Settings</span>
+                <i class="fa-regular fa-xl fa-gear text-primary-light dark:text-gray-500"></i>
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Settings</span>
+            </a>
+            <a href="#" title="Log out">
+                <i class="fa-regular fa-xl text-primary-light dark:text-gray-500 fa-right-from-bracket"></i> 
+                <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Log Out</span>
             </a>
 
         </nav>
 
-        <nav id="mobileNav" class="absolute top-0 left-0 w-full md:hidden bg-white dark:bg-gray-900 p-4 shadow-sm">
+        <nav id="mobileNav" class="fixed top-0 left-0 w-full md:hidden bg-white dark:bg-gray-900 p-4 shadow-sm z-50">
             <div class="flex justify-between items-center">
 
                 <svg class="fill-primary dark:fill-white h-8 w-8" viewBox="0 0 426 373" fill="none"
@@ -103,12 +107,15 @@
                 <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
                         <i class="fa-regular fa-gear"></i> <span>Settings</span>
                     </a></li>
+                    <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-solid fa-right-from-bracket"></i><span>Log Out</span>
+                    </a></li>
             </ul>
         </nav>
 
-        <main class="col-span-12 md:col-span-8 lg:col-span-7 mt-16 md:mt-0">
-            <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800  border-b border-gray-500 border-solid">
-                <img src="" alt="User Avatar" class="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-700">
+        <main class="col-span-12 md:col-span-8 lg:col-span-7 mt-16 md:mt-0 overflow-y-auto dark:bg-gray-800">
+            <div id="createPost" class="flex items-start gap-4 p-4  dark:bg-gray-800 border-b border-gray-500 border-solid sticky top-0 z-10">
+                <img src="/profile-photo.webp" alt="User Avatar" class="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-700">
                 <div class="flex-1 space-y-3">
                     <textarea name="postContent" id="postContent" placeholder="What's on your mind?"
                         class="w-full p-3 rounded-md bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-200 focus:outline-none focus:ring-2 focus:ring-primary"></textarea>
@@ -142,17 +149,164 @@
 
                 <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
                     <div class="w-12 h-12">
-                        <img src="" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                        <img src="/profile-photo-5.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
                     </div>
                     <div class="flex-1 space-y-3">
                         <div class="flex justify-between items-center">
-                            <span class="font-semibold text-gray-900 dark:text-gray-200">Username</span>
-                            <span class="text-sm text-gray-500 dark:text-gray-400">Hours ago</span>
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">CodingFrog</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">2hrs</span>
                         </div>
-                        <p class="text-gray-800 dark:text-gray-300">Post text</p>
+                        <p class="text-gray-800 dark:text-gray-300">Debugging: when the code hops around perfectly in your head but leaps into a swamp of errors when you run it. 🐸💻💚 Still, there's no better feeling than making the pond peaceful again. #FrogCoder #Debugging</p>
 
                         <div class="w-full">
-                            <img src="" alt="Post Image" class="w-full rounded-md bg-gray-200 dark:bg-gray-700">
+                            <img src="/post-image-1.jpg" alt="Post Image" class="w-full rounded-md bg-gray-200 dark:bg-gray-700">
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo-3.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">RubberDucky</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">3hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">Some think I'm just a rubber duck, but I'm the silent co-pilot of many coding adventures. 🦆💻 I may not quack out loud, but I always help devs crack the code. #CodingDuck #DebuggingCompanion</p>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo-5.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">CodingFrog</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">4hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">"Wrote some code today that actually compiled on the first try... Am I a wizard frog now? 🐸✨💻 #CodeMagic #FrogsCanCode"</p>
+
+                        <div class="w-full">
+                            <img src="/post-gif-3.gif" alt="Post Image" class="w-full rounded-md bg-gray-200 dark:bg-gray-700">
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo-3.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">RubberDucky</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">4hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">Another day, another coder spilling their problems to me. Little do they know, it's the listening that works the magic. Quack wisdom is all about letting the devs hear their own brilliance. 🦆💡 #RubberDuckDebugging #CodeWhisperer</p>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo-5.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">CodingFrog</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">6hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">"Sometimes I just sit by the lily pad, stare at the pond, and think... maybe if loops were more like lily pads, I’d finally stop hopping into infinite ones. 🏞️🐸 #CodeLife #FrogThoughts"</p>
+
+                        <div class="w-full">
+                            <img src="/post-photo-5.jpg" alt="Post Image" class="w-full rounded-md bg-gray-200 dark:bg-gray-700">
+                        </div>
+                        <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-heart"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-comment"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-share"></i>
+                            </button>
+                            <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
+                                <i class="fa-regular fa-flag"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-4 bg-white dark:bg-gray-800 border-b border-gray-500 border-solid">
+                    <div class="w-12 h-12">
+                        <img src="/profile-photo-2.webp" alt="User Avatar" class="w-full h-full rounded-full bg-gray-300 dark:bg-gray-700">
+                    </div>
+                    <div class="flex-1 space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="font-semibold text-gray-900 dark:text-gray-200">ByteSizedGenius</span>
+                            <span class="text-sm text-gray-500 dark:text-gray-400">7hrs</span>
+                        </div>
+                        <p class="text-gray-800 dark:text-gray-300">Wrote a script that automates my morning coffee brewing routine. I mean, why code before caffeine when you can code your way to caffeine? ☕💻 #AutomateEverything #NerdLife</p>
+
+                        <div class="w-full">
+                            <img src="/post-photo-6.webp" alt="Post Image" class="w-full rounded-md bg-gray-200 dark:bg-gray-700">
                         </div>
                         <div class="flex items-center gap-4 text-gray-500 dark:text-gray-400">
                             <button class="p-2 rounded hover:bg-gray-200 dark:hover:bg-gray-600">
@@ -173,7 +327,9 @@
             </div>
 
         </main>
-<aside class="hidden md:flex md:flex-col md:col-span-3 lg:col-span-3 border-l border-gray-300 dark:border-gray-700 p-4 space-y-6">
+
+
+        <aside class="hidden sticky top-0 h-screen overflow-y-auto md:flex md:flex-col md:col-span-3 lg:col-span-3 border-l border-gray-300 dark:border-gray-700 p-4 space-y-6">
 
     <div class="search-container flex items-center bg-gray-100 dark:bg-gray-800 rounded-md p-2">
         <input type="text" placeholder="Search..." class="flex-1 bg-transparent outline-none text-gray-900 dark:text-gray-200 px-2 w-10">
@@ -186,24 +342,32 @@
         <h2 class="text-md font-semibold text-gray-900 dark:text-gray-200">
             You might like this:
         </h2>
-        <a href="#" class="flex flex-col items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
-            <img src="" alt="News Image" class="w-full h-20 rounded-md bg-gray-300 dark:bg-gray-700">
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
             <span class="text-gray-800 dark:text-gray-300">
-                Some news
+                DevWeekly: Python 4.0 Announced - A Leap into True Parallelism
             </span>
         </a>
-        <a href="#" class="flex flex-col items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
-            <img src="" alt="News Image" class="w-full h-20 rounded-md bg-gray-300 dark:bg-gray-700">
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
             <span class="text-gray-800 dark:text-gray-300">
-                Some news
+                CodePulse: JavaScript Framework Wars Heat Up - New Player 'XenoJS' Claims to End All Others
             </span>
         </a>
-        <a href="#" class="flex flex-col items-center gap-2 bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
-            <img src="" alt="News Image" class="w-full h-20 rounded-md bg-gray-300 dark:bg-gray-700">
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
             <span class="text-gray-800 dark:text-gray-300">
-                Some news
+                CyberFront: AI-Powered Penetration Testing Tool Released, Raises Security Community Alarm
             </span>
         </a>
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <span class="text-gray-800 dark:text-gray-300">
+                CloudWave: Serverless Revolution 2.0 - The Emergence of Stateless Microservices
+            </span>
+        </a>
+        <a href="#" class="flex flex-col items-center bg-gray-100 dark:bg-gray-800 rounded-md p-1 hover:bg-gray-200 dark:hover:bg-gray-700">
+            <span class="text-gray-800 dark:text-gray-300">
+                QuantumBytes: IBM's Quantum Computer Solves Complex Math Problem 100x Faster Than Supercomputers
+            </span>
+        </a>
+        
     </div>
 </aside>
 
