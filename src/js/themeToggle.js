@@ -1,4 +1,4 @@
-const themeToggle = document.querySelector('.themeToggle');
+const themeToggles = document.querySelectorAll('.themeToggle');
 const icon = document.querySelector('.themeIcon');
 
 export function setTheme(isDark) {
@@ -18,11 +18,12 @@ export function initializeTheme() {
   const isDark = savedTheme === 'dark';
   setTheme(isDark);
 
-
-  themeToggle.addEventListener('click', () => {
-    const currentIsDark = document.documentElement.classList.contains('dark');
-    const newIsDark = !currentIsDark;
-    setTheme(newIsDark);
-    localStorage.setItem('theme', newIsDark ? 'dark' : 'light');
+  themeToggles.forEach((toggle) => {
+    toggle.addEventListener('click', () => {
+      const currentIsDark = document.documentElement.classList.contains('dark');
+      const newIsDark = !currentIsDark;
+      setTheme(newIsDark);
+      localStorage.setItem('theme', newIsDark ? 'dark' : 'light');
+    });
   });
 }

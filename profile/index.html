@@ -55,7 +55,7 @@
                 <span class="hidden lg:inline-block text-primary-light dark:text-gray-500">Settings</span>
             </a>
             <button title="Toggle Dark Mode" class="themeToggle">
-                <i class="themeIcon fa-regular fa-xl fa-moon dark:fa-sun  text-primary hover:text-primary-dark dark:text-white"></i>
+                <i class="themeIcon fa-regular fa-xl fa-moon  text-primary hover:text-primary-dark dark:text-white"></i>
                 <span class="hidden lg:inline-block text-primary dark:text-white">Toggle Theme</span>
             </button>
             <a title="Log out">
@@ -65,7 +65,7 @@
 
         </nav>
 
-        <nav id="mobileNav" class="absolute top-0 left-0 w-full md:hidden bg-white dark:bg-gray-900 p-4 shadow-sm">
+        <nav id="mobileNav" class="fixed top-0 left-0 w-full md:hidden bg-white dark:bg-gray-900 p-4 shadow-sm z-50">
             <div class="flex justify-between items-center">
 
                 <svg class="fill-primary dark:fill-white h-8 w-8" viewBox="0 0 426 373" fill="none"
@@ -88,9 +88,9 @@
                 </button>
             </div>
 
-            <ul class="mt-4 space-y-4 hidden">
+            <ul id="mobileNavList" class="mt-4 space-y-4 hidden">
                 <li><a href="../home/" class="flex items-center gap-2 text-primary dark:text-white">
-                        <i class="fa-solid fa-house"></i> <span>Home</span>
+                        <i class="fa-regular fa-house"></i> <span>Home</span>
                     </a></li>
                 <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
                         <i class="fa-regular fa-bell"></i> <span>Notifications</span>
@@ -105,10 +105,19 @@
                         <i class="fa-regular fa-calendar"></i> <span>Event Calendar</span>
                     </a></li>
                 <li><a href="../profile/" class="flex items-center gap-2 text-primary dark:text-white">
-                        <i class="fa-regular fa-user"></i> <span>Profile</span>
+                        <i class="fa-solid fa-user"></i> <span>Profile</span>
                     </a></li>
                 <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
                         <i class="fa-regular fa-gear"></i> <span>Settings</span>
+                    </a></li>
+                    <li>
+                        <button title="Toggle Dark Mode" class="themeToggle">
+                            <i class="themeIcon fa-regular fa-xl fa-moon text-primary hover:text-primary-dark dark:text-white"></i>
+                            <span class="text-primary hover:text-primary-dark dark:text-white" >Toggle Theme</span>
+                        </button>
+                    </li>
+                    <li><a href="#" class="flex items-center gap-2 text-primary dark:text-white">
+                        <i class="fa-solid fa-right-from-bracket"></i><span>Log Out</span>
                     </a></li>
             </ul>
         </nav>
