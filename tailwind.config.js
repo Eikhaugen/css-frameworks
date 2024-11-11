@@ -5,30 +5,24 @@ export default {
     extend: {
       colors: {
         primary: {
-          light: '#93c5fd', 
+          light: '#93c5fd',
           DEFAULT: '#3b82f6',
-          dark: '#1e40af', 
+          dark: '#1e40af',
         },
-        secondary: {
-          light: '#fda4af', 
-          DEFAULT: '#f43f5e',
-          dark: '#9f1239', 
+        warning: '#f59e0b',
+        success: '#10b981',
+        error: '#ef4444',
+        bg: {
+          light: '#ffffff',
+          dark: '#111827', 
         },
-        accent: {
-          light: '#6ee7b7', 
-          DEFAULT: '#10b981',
-          dark: '#065f46', 
+        text: {
+          light: '#374151',
+          dark: '#f3f4f6', 
         },
-        neutral: {
-          light: '#f3f4f6', 
-          DEFAULT: '#9ca3af',
-          dark: '#374151', 
-        },
-        warning: '#f59e0b', 
-        success: '#10b981', 
-        error: '#ef4444', 
       },
     },
   },
   plugins: [],
+  darkMode: 'class'
 };
